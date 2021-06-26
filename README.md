@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Updating the path with the my network diagram](Diagrams/ELK-Project-Network-Diagram.png)
+![Updating the path with the my network diagram](Diagrams/ELK-Project-Network-Diagram1.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the `yaml` file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -10,7 +10,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - [elk-install.yml](Ansible/elk-install.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -34,7 +34,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.1.0.4   | Linux            |
+| Jump Box | Gateway  |10.1.0.4    | Linux            |
 | Web-1    |Webserver |10.1.0.5    | Linux            |
 | Web-2    |Webserver |10.1.0.6    | Linux            |
 | Web-3    |Webserver |10.1.0.8    | Linux            |
@@ -55,11 +55,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | My persomnal IP      |
-| Web-1    | No                  | 10.1.0.4             |
-| Web-2    | No                  | 10.1.0.4             | 
-| Web-3    | No                  | 10.1.0.4             |
-| Elk      | No                  | 10.1.0.4           |
+| Jump Box | Yes                 | My personal IP       |
+| Web-1    | No                  | 10.1.0.5             |
+| Web-2    | No                  | 10.1.0.6             | 
+| Web-3    | No                  | 10.1.0.8             |
+| Elk      | No                  | 10.2.0.4             |
 
 ### Elk Configuration
 
@@ -67,7 +67,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _ What is the main advantage of automating configuration with Ansible? `It saves time and resuces amount of human error`.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- _ In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - `Install docker, install pip3` 
 - `Install docker python module` 
 - `Change memory usage, download and launch docker elk container,enable service on docker`
@@ -104,6 +104,7 @@ _ Answer the following questions to fill in the blanks:_
 `http://20.81.85.111:5601`
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+`EXAMPLE:`
 `curl https://raw.githubusercontent.com/B-Hash21/ELK-Project-1/main/Ansible/ansible.yml > ansible.yml`
 `nano hosts`
 `ansible-playbook ansible.yml`
