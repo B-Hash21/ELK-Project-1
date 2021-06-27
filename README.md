@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Updating the path with the network diagram](Diagrams/ELK-Project-Network-Diagram1.png)
+![The path to the network diagram](Diagrams/ELK-Project-Network-Diagram1.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the `yaml` file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -23,11 +23,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly `available`, in addition to restricting `access` to the network.
-- What aspect of security do load balancers protect? `availability`. What is the advantage of a jump box? `increase security of the backend of the servers and reduce the attack vector surface`.
+- Load balancers protect the `availability` aspect of security 
+- The advantages of a jump box include `increased security of the backend of the servers and reduce the attack vector surface`.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the `configuration settings` and system `logs`.
-- What does Filebeat watch for? `Filebeat watches for SSH log-ins, SUDO commands and Linux account log-ins`.
-- What does Metricbeat record? `Metricbeat watches for CPU, RAM & monitor usage`.
+- `Filebeat watches for SSH log-ins, SUDO commands and Linux account log-ins`.
+- `Metricbeat watches for CPU, RAM & monitor usage`.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -46,10 +47,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the `jump-box` machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- Add whitelisted IP addresses_ `My personal IP address`.
+- Whitelisted IP address is `My personal IP address`.
 
-Machines within the network can only be accessed by `the ansible container`.
-- Which machine did you allow to access your ELK VM? What was its IP address? `The jump-box. IP address is 10.1.0.4`.
+Machines within the network can only be accessed by `the ansible container inside the jump-box. It's IP address is 10.1.0.4`.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -64,29 +64,31 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- What is the main advantage of automating configuration with Ansible? `It saves time and resuces amount of human error`.
+- `It saves time and reduces the amount of human error`.
 
 The playbook implements the following tasks:
-- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- `Install docker, install pip3` 
+- `Install docker` 
+- `Install pip3` 
 - `Install docker python module` 
-- `Change memory usage, download and launch docker elk container,enable service on docker`
+- `Change memory usage` 
+- `Download and launch docker elk container and enable service on docker`
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Updating the path to screenshot of docker ps output](Diagrams/ELK-Container.png)
+![The path to screenshot of docker ps output](Diagrams/ELK-Container.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- List the IP addresses of the machines you are monitoring `Web-1 (10.1.0.5), Web-2 (10.1.0.6) and Web-3 (10.1.0.8)`
+- `Web-1 (10.1.0.5)` 
+- `Web-2 (10.1.0.6) and` 
+- `Web-3 (10.1.0.8)`
 
 We have installed the following Beats on these machines:
-- Specify which Beats you successfully installed - `Filebeat and Metricbeat`.
+- `Filebeat and Metricbeat`.
 
 These Beats allow us to collect the following information from each machine:
-- In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-`Filebeat colects for SSH log-ins, SUDO commands and Linux account log-ins data. I expect to see history of SSH attempts, SUCO commands ran on the system etc.`
-`Metricbeat collects data on CPU, RAM & monitor usage etc. I would expect to see how a specific process contributes the usage of CPU, RAM and Network.`
+- `Filebeat collects data for SSH log-ins, SUDO commands and Linux account log-ins data. I would expect to see history of SSH attempts, SUDO commands run on the system etc.`
+- `Metricbeat collects data on CPU, RAM & monitor usage etc. I would expect to see how a specific process contributes the usage of CPU, RAM and Network.`
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
