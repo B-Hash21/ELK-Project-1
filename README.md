@@ -106,7 +106,7 @@ _ Answer the following questions to fill in the blanks:_
 `http://20.81.85.111:5601`
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-- `EXAMPLE:`
+`EXAMPLE:`
 - `curl https://raw.githubusercontent.com/B-Hash21/ELK-Project-1/main/Ansible/ansible.yml > ansible.yml`
 - `nano hosts`
 - `ansible-playbook ansible.yml`
