@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 #Create /var/backup if it doesn't exist
@@ -15,4 +14,3 @@ tar cvf /var/backup/system.tar /home
 ls -lh /var/backup > /var/backup/file_report.txt
 
 free -h > /var/backup/disk_report.txt
-

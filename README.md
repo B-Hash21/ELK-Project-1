@@ -101,7 +101,7 @@ SSH into the control node and follow the steps below:
 _ Answer the following questions to fill in the blanks:_
 - Which file is the playbook? Where do you copy it? `All yaml file are playbooks. You copy it to /etc/ansible/`.
 - Which file do you update to make Ansible run the playbook on a specific machine? `The hosts file`. 
-- How do I specify which machine to install the ELK server on versus which to install Filebeat on? `In order to specify which machine to install the ELK server on, we would have to specify in our scripts under the hosts' section in which we have to label which group the yaml script would apply to.`
+- How do I specify which machine to install the ELK server on versus which to install Filebeat on? `In order to specify which machine to install the ELK server on, we would have to specify in our scripts under the hosts' file in the ansible folder, the hosts' file section in which we have to label which group the yaml script would apply to.`
 - Which URL do you navigate to in order to check that the ELK server is running?
 `http://20.81.85.111:5601`
 
